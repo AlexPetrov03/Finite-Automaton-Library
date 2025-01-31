@@ -27,16 +27,28 @@ A library for creating and operating on Finite Automata (NFA and DFA).
 ## Използване
 
 ### Пример: Създаване на детерминиран краен автомат (DFA)
-```cpp
+```c
 // Пример за добавяне на състояния и преходи
 DFA dfa;
 State* q0 = dfa.addState("q0");
 State* q1 = dfa.addState("q1", true);  // Крайно състояние
 
-dfa.setStartState(q0)
+dfa.setStartState(q0); // Задаваме началното състояние
 
 dfa.addTransition(q0, 'a', q1);
 ```
 
+Създаването на недетерминиран краен автомат (NFA) е идентично, но позволява преходи с епсилон (ε) (празния символ). В библиотеката епсилон се представя с '@'.
+```cpp
+// Пример за добавяне на състояния и преходи
+NFA nfa;
+State* q0 = nfa.addState("q0");
+State* q1 = nfa.addState("q1", true);
+State* q2 = nfa.addState("q2", true);
 
+nfa.setStartState(q0);
+
+nfa.addTransition(q0, 'a', q1);
+nfa.addTransition(q1, '@', q2);
+```
 
