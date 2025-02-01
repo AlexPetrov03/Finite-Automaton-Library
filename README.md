@@ -1,5 +1,5 @@
 # Finite-Automaton-Library
-A library for creating and operating on Finite Automata (NFA and DFA).
+An open source library for creating and operating on Finite Automata (NFA and DFA).
 
 ## Описание
 Библиотеката позволява работа с крайни детерминирани автомати (DFA) и недетерминирани автомати (NFA) с ℇ-преходи над произволна азбука. Поддържат се следните операции:
